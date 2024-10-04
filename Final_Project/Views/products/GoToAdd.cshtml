@@ -1,0 +1,45 @@
+﻿@model products
+<form asp-action="SaveAddedData" asp-controller="products">
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="name">Name</label>
+        <input type="text" class="form-control" asp-for="name"  placeholder="Name....">
+        <span asp-validation-for="name"></span>
+    </div> 
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="price">Price</label>
+        <input type="number" class="form-control" asp-for="price"  placeholder="Price....">
+        <span asp-validation-for="price"></span>
+    </div> 
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="sku">SKU</label>
+        <input type="number" class="form-control" asp-for="sku"  placeholder="SKU....">
+        <span asp-validation-for="sku"></span>
+    </div> 
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="weight">Weight</label>
+        <input type="number" class="form-control" asp-for="weight"  placeholder="weight....">
+        <span asp-validation-for="weight"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="description">Description</label>
+        <input type="text" class="form-control" asp-for="description"  placeholder="description....">
+        <span asp-validation-for="description"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="catgory">Category</label>
+        <input type="text" class="form-control" asp-for="catgory"  placeholder="category....">
+        <span asp-validation-for="catgory"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="date">Date</label>
+        <input type="date" class="form-control" asp-for="date"  placeholder="Date....">
+        <span asp-validation-for="date"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="stock">Stock</label>
+        <input type="number" class="form-control" asp-for="stock"  placeholder="stock....">
+        <span asp-validation-for="stock"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>

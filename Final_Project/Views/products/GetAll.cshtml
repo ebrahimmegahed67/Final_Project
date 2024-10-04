@@ -1,0 +1,70 @@
+﻿@model List<products>
+
+    <style>
+        .btn{
+            color:white;
+            padding:10px;
+        }
+        .edit{
+        background-color: #4260f5;
+        }
+        .delete{
+            background-color:tomato;
+        }
+    </style>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">image</th>
+            <th scope="col">SKU</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Weight</th>
+         
+            <th scope="col">description</th>
+            <th scope="col">category</th>
+            <th scope="col">Date</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.id</th>
+                <th scope="row">
+                    <img width="150px" height="150px"  src="/image/@item.image"/>
+                </th>
+                <td>@item.sku</td>
+                <td>@item.name</td>
+                <td>@item.price</td>
+                <td>@item.weight</td>
+                <td>@item.description</td>
+                <td>@item.catgory</td>
+                <td>@item.date</td>
+                <td>@item.stock</td>
+                <td>
+                    <a href="/products/GoToEdit/@item.id">
+                        <button class="btn edit">Edit</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="/products/Delete/@item.id">
+                        <button class="btn delete">Delete</button>
+                    </a>
+                </td>
+            </tr>
+        }
+      
+       
+    </tbody>
+</table>
+
+
+@{
+    Layout = "_CustomizeLayout1";
+}

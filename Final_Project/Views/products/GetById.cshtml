@@ -1,0 +1,23 @@
+﻿@model products
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="/image/@Model.image" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">@Model.name</h5>
+        <p class="card-text">@Model.description.</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">@Model.price</li>
+        <li class="list-group-item">@Model.weight</li>
+        <li class="list-group-item">@Model.sku</li>
+        <li class="list-group-item">@Model.date</li>
+        <li class="list-group-item">@Model.stock</li>
+        <li class="list-group-item">@Model.catgory</li>
+       
+    </ul>
+    <div class="card-body">
+        <a href="/products/GetAll" class="card-link">Back</a>
+      
+    </div>
+</div>
+

@@ -1,0 +1,24 @@
+﻿@model orders
+
+<div class="card" style="width: 18rem;">
+
+    <div class="card-body">
+        <h5 class="card-title">@Model.Id</h5>
+        <p class="card-text">@Model.amount</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">@Model.shipping_address</li>
+        <li class="list-group-item">@Model.orders_address</li>
+        <li class="list-group-item">@Model.orders_date</li>
+        <li class="list-group-item">@Model.orders_email</li>
+        <li class="list-group-item">@Model.orders_status</li>
+        <li class="list-group-item">@Model.customer_id</li>
+
+
+    </ul>
+    <div class="card-body">
+        <a href="/order/GetAll" class="card-link">Back</a>
+
+    </div>
+</div>
+

@@ -1,0 +1,23 @@
+﻿@model customers
+
+<div class="card" style="width: 18rem;">
+
+    <div class="card-body">
+        <h5 class="card-title">@Model.Id</h5>
+        <p class="card-text">@Model.email</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">@Model.password</li>
+        <li class="list-group-item">@Model.fullName</li>
+        <li class="list-group-item">@Model.billing_address</li>
+        <li class="list-group-item">@Model.default_shipping_address</li>
+        <li class="list-group-item">@Model.country</li>
+        <li class="list-group-item">@Model.phone</li>
+
+    </ul>
+    <div class="card-body">
+        <a href="/customer/GetAll" class="card-link">Back</a>
+
+    </div>
+</div>
+

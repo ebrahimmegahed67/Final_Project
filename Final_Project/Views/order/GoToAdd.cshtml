@@ -1,0 +1,51 @@
+﻿@model orders
+<form asp-action="SaveAddedData" asp-controller="order">
+    <div class="form-group">
+        <input type="hidden" asp-for="Id" />
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="amount">Amount</label>
+        <input type="text" class="form-control" asp-for="amount" placeholder="Amount....">
+        <span asp-validation-for="amount"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="shipping_address">Shipping Address</label>
+        <input type="text" class="form-control" asp-for="shipping_address" placeholder="shipping_Address....">
+        <span asp-validation-for="shipping_address"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="orders_address">Orders Address</label>
+        <input type="text" class="form-control" asp-for="orders_address" placeholder="Orders_Address....">
+        <span asp-validation-for="orders_address"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="orders_email">Orders Email</label>
+        <input type="text" class="form-control" asp-for="orders_email" placeholder="orders_Email....">
+        <span asp-validation-for="orders_email"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="orders_date">Orders Date</label>
+        <input type="text" class="form-control" asp-for="orders_date" placeholder="orders_date....">
+        <span asp-validation-for="orders_date"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="orders_status">Orders Status</label>
+        <input type="text" class="form-control" asp-for="orders_status" placeholder="orders_status....">
+        <span asp-validation-for="orders_status"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="customer_id">Customer Name</label>
+        <select class="form-control" asp-for="customer_id" >
+            @foreach (customers item in ViewBag.CustomerId)
+            {
+                <option value="@item.Id">@item.fullName</option>
+            }
+
+           
+        </select>
+        <span asp-validation-for="orders_status"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+

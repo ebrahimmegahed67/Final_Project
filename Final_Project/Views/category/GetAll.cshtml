@@ -1,0 +1,55 @@
+﻿@model List<categories>
+
+<style>
+    .btn {
+        color: white;
+        padding: 10px;
+    }
+
+    .edit {
+        background-color: #4260f5;
+    }
+
+    .delete {
+        background-color: tomato;
+    }
+</style>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">description</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+            
+
+          
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+               
+                <td>@item.Name</td>
+                <td>@item.description</td>
+                <td>
+                    <a href="/category/GoToEdit/@item.Id">
+                        <button class="btn edit">Edit</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="/category/Delete/@item.Id">
+                        <button class="btn delete">Delete</button>
+                    </a>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+

@@ -1,0 +1,44 @@
+﻿@model customers
+<form asp-action="SaveAddedData" asp-controller="customer">
+    <div class="form-group">
+        <input type="hidden" asp-for="Id" />
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="email">Email</label>
+        <input type="email" class="form-control" asp-for="email" placeholder="Email....">
+        <span asp-validation-for="email"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="password">Password</label>
+        <input type="password" class="form-control" asp-for="password" placeholder="Password....">
+        <span asp-validation-for="password"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="fullName">FullName</label>
+        <input type="text" class="form-control" asp-for="fullName" placeholder="fullName....">
+        <span asp-validation-for="fullName"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="billing_address">BillingAddress</label>
+        <input type="text" class="form-control" asp-for="billing_address" placeholder="billing_address....">
+        <span asp-validation-for="billing_address"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="default_shipping_address">DefaultShippingAddress</label>
+        <input type="email" class="form-control" asp-for="default_shipping_address" placeholder="default_shipping_address....">
+        <span asp-validation-for="default_shipping_address"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="country">Country</label>
+        <input type="text" class="form-control" asp-for="country" placeholder="country....">
+        <span asp-validation-for="country"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" asp-for="phone">Phone</label>
+        <input type="text" class="form-control" asp-for="phone" placeholder="Phone....">
+        <span asp-validation-for="phone"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
