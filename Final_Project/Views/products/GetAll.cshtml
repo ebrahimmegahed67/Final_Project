@@ -13,6 +13,8 @@
         }
     </style>
 
+    <a href="/products/GoToAdd">Add New Product</a>
+
 <table class="table">
     <thead>
         <tr>
@@ -29,6 +31,7 @@
             <th scope="col">Stock</th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
+            <th scope="col">Details</th>
         </tr>
     </thead>
     <tbody>
@@ -57,6 +60,7 @@
                         <button class="btn delete">Delete</button>
                     </a>
                 </td>
+                <td><a href="/products/GetById/@item.id"><i class="fas fa-info-circle"></i></a></td>
             </tr>
         }
       
@@ -67,4 +71,7 @@
 
 @{
     Layout = "_CustomizeLayout1";
+}
+@section ViewName{
+    All Products
 }

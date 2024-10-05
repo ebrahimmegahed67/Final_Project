@@ -14,7 +14,7 @@
         background-color: tomato;
     }
 </style>
-
+<a href="/order/GoToAdd">Add New Order</a>
 <table class="table">
     <thead>
         <tr>
@@ -28,6 +28,7 @@
             <th scope="col">Customer_id</th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
+            <th scope="col">Details</th>
         </tr>
     </thead>
     <tbody>
@@ -53,9 +54,18 @@
                         <button class="btn delete">Delete</button>
                     </a>
                 </td>
+                <td><a href="/order/GetById/@item.Id"><i class="fas fa-info-circle"></i></a></td>
+
             </tr>
         }
 
 
     </tbody>
 </table>
+
+@{
+    Layout = "_CustomizeLayout1";
+}
+@section ViewName {
+    All Orders
+}
